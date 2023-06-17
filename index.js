@@ -1,4 +1,7 @@
 const inquirer = require("inquirer");
+const fs = require('fs');
+
+const generateMarkdown = require('./assets/utils/generateMarkdown.js');
 
 // array of questions for user
 inquirer.prompt([
@@ -111,4 +114,10 @@ inquirer.prompt([
                 return false;
             }
         }
-    }])
+    }]).then(function ({ title, description, installation, usage, contribution, test, license, github, email }) {
+        generateMarkdown({ title, description, installation, usage, contribution, test, license, github, email});
+        // fs.writeFile('README.md', generateMarkdown(data), err => {
+        //     if (err) throw err;
+        //     console.log('README complete! Check out README.md to see the output!');
+        // });
+    })
