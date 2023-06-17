@@ -1,6 +1,12 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 
+const uuid = Date.now()
+const path = ("./assets/saved/")
+const fileName = `README_${uuid}.md`
+const filepath = path + fileName
+
+
 const generateMarkdown = require('./assets/utils/generateMarkdown.js');
 
 // array of questions for user
@@ -115,9 +121,9 @@ inquirer.prompt([
             }
         }
     }]).then(function ({ title, description, installation, usage, contribution, test, license, github, email }) {
-        generateMarkdown({ title, description, installation, usage, contribution, test, license, github, email});
-        // fs.writeFile('README.md', generateMarkdown(data), err => {
-        //     if (err) throw err;
-        //     console.log('README complete! Check out README.md to see the output!');
-        // });
+        // Create an object to write the file
+        fs.writeFile(filepath, generateMarkdown({title, description, installation, usage, contribution, test, license, github, email  }), err => {
+            if (err) throw err;
+            console.log('README complete! Check out README.md to see the output!');
+        });
     })
