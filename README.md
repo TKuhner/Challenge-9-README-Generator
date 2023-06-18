@@ -1,6 +1,6 @@
 # 09-README-Generator-Trevor-Kuhner# Project Title
 
-![Demo Gif](image.png)
+
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## Introduction
 
-This project is a command-line program that allows users to create a readme markdown file certain actions related to . The program prompts the user with a series of questions and generates a [output, file, or result] based on the user's input.
+This project is a command-line program that allows users to create a readme markdown file that will accept user inputs and apply them to the corresponding fields of the markdown file. The program prompts the user with a series of questions and applies their responses to the markdown file from the user's input.
 
 ## Installation
 
@@ -34,11 +34,9 @@ To use the program, follow these steps:
 4. Answer the prompts with the required information.
 5. The program will generate the desired output or perform the specified actions.
 
-## Contributing
-
-Currently not accepting contributions.
-
 ## Tests
 
 To run the tests for this program, use the following command:
 
+## License
+This project is licensed under the terms of the MIT license.
